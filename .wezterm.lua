@@ -7,8 +7,8 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- Font
-config.font = wezterm.font("IosevkaTerm Nerd Font")
-config.font_size = 14
+config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font_size = 16
 
 -- Tab
 config.enable_tab_bar = false
