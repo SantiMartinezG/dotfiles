@@ -10,7 +10,6 @@ return {
 			local mason = require("mason")
 			local mason_lspconfig = require("mason-lspconfig")
 			local mason_tool_installer = require("mason-tool-installer")
-
 			-- Mason setup
 			mason.setup({
 				ui = {
@@ -21,7 +20,6 @@ return {
 					},
 				},
 			})
-
 			-- Mason LSP config setup
 			mason_lspconfig.setup({
 				-- List of LSP servers to install
@@ -40,7 +38,6 @@ return {
 					"gopls", -- Go
 				},
 			})
-
 			-- Mason Tool Installer setup
 			mason_tool_installer.setup({
 				-- List of formatters, linters and debuggers to install

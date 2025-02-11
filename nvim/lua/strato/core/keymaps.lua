@@ -6,7 +6,7 @@ vim.g.maplocalleader = "\\"
 -- Create a local variable for easier access to vim.keymap
 local keymap = vim.keymap
 
--- Exit insert mode by pressing 'jk' 
+-- Exit insert mode by pressing 'jk'
 keymap.set("i", "jk", "<Esc>")
 
 -- Clear search highlights
@@ -46,4 +46,4 @@ keymap.set("n", "tp", ":tabprevious<CR>")
 keymap.set("n", "tf", ":tabnew %<CR>")
 
 -- Select all text in the current buffer
-keymap.set("n", "sa", "ggVG")
+keymap.set("n", "<C-a>", "gg<S-v>G")

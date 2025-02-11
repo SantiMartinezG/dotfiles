@@ -61,3 +61,6 @@ opt.swapfile = false
 -- Ensure Neovim recognizes .astro files and sets the correct filetype
 -- This enables proper syntax highlighting, LSP support, and plugin integrations for Astro files
 vim.cmd([[au BufNewFile,BufRead *.astro set filetype=astro]])
+
+-- Set Python interpreter path for Neovim
+vim.g.python3_host_prog = "/usr/bin/python3.10"
