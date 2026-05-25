@@ -1,0 +1,16 @@
+# OS
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Neovim / Plugins
+*.log
+.netrwhist
+undo/
+backups/
+
+# Environments / Dependencies
+.venv/
+venv/
+node_modules/

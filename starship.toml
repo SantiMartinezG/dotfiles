@@ -1,0 +1,52 @@
+# ============================================================
+# STARSHIP PROMPT — SOLARIZED OSAKA
+# Fish + tmux + nvim + WezTerm | CachyOS
+# ============================================================
+
+# --- Layout ---
+format = """
+$directory$git_branch$git_status$cmd_duration
+$character"""
+
+add_newline = false
+command_timeout = 500
+
+# --- Prompt Symbol ---
+[character]
+success_symbol = "[❯](bold #49AEF5)"
+error_symbol = "[❯](bold #DC322F)"
+vimcmd_symbol = "[❮](bold #B58900)"
+
+# --- Directory ---
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+format = "[$path](fg:#49AEF5 bold) [$read_only](fg:#DC322F)"
+home_symbol = "~"
+read_only = "🔒"
+read_only_style = "fg:#DC322F"
+
+# --- Git Branch ---
+[git_branch]
+symbol = ""
+format = "[on](fg:#586E75) [$branch](fg:#B58900 bold) "
+
+# --- Git Status ---
+[git_status]
+format = '([$all_status$ahead_behind](fg:#2AA198)) '
+conflicted = "=${count}"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕${count}"
+untracked = "?${count}"
+stashed = "$${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
+
+# --- Command Duration ---
+[cmd_duration]
+min_time = 2000
+format = "[took](fg:#586E75) [$duration](fg:#2AA198) "
+show_notifications = false
