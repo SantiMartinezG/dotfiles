@@ -1,51 +1,49 @@
-# ============================================================
-# STARSHIP PROMPT — SOLARIZED OSAKA
+# Starship Prompt — Solarized Osaka
 # Fish + tmux + nvim + WezTerm | CachyOS
-# ============================================================
+# Philosophy: Plain ASCII, no nerd fonts, no emojis, easy to maintain.
 
-# --- Layout ---
+# Layout
 format = """
 $directory$git_branch$git_status$cmd_duration
 $character"""
 
 add_newline = false
-command_timeout = 500
+command_timeout = 1000
 
-# --- Prompt Symbol ---
+# Prompt Symbol
 [character]
-success_symbol = "[❯](bold #49AEF5)"
-error_symbol = "[❯](bold #DC322F)"
-vimcmd_symbol = "[❮](bold #B58900)"
+success_symbol = "[>](bold #49AEF5)"
+error_symbol = "[>](bold #DC322F)"
+vimcmd_symbol = "[<<](bold #B58900)"
 
-# --- Directory ---
+# Directory
 [directory]
 truncation_length = 3
 truncate_to_repo = true
-format = "[$path](fg:#49AEF5 bold) [$read_only](fg:#DC322F)"
+format = "[$path](fg:#49AEF5 bold)$read_only "
 home_symbol = "~"
-read_only = "🔒"
-read_only_style = "fg:#DC322F"
+read_only = " [RO](fg:#DC322F)"
 
-# --- Git Branch ---
+# Git Branch
 [git_branch]
 symbol = ""
-format = "[on](fg:#586E75) [$branch](fg:#B58900 bold) "
+format = "[$branch](fg:#B58900 bold) "
 
-# --- Git Status ---
+# Git Status
 [git_status]
 format = '([$all_status$ahead_behind](fg:#2AA198)) '
 conflicted = "=${count}"
-ahead = "⇡${count}"
-behind = "⇣${count}"
-diverged = "⇕${count}"
+ahead = "^${count}"
+behind = "v${count}"
+diverged = "<>${count}"
 untracked = "?${count}"
-stashed = "$${count}"
-modified = "!${count}"
+stashed = ":${count}"
+modified = "*${count}"
 staged = "+${count}"
-renamed = "»${count}"
-deleted = "✘${count}"
+renamed = "->${count}"
+deleted = "-${count}"
 
-# --- Command Duration ---
+# Command Duration
 [cmd_duration]
 min_time = 2000
 format = "[took](fg:#586E75) [$duration](fg:#2AA198) "
