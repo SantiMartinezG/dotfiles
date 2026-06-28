@@ -29,3 +29,6 @@ fish_add_path /usr/local/go/bin
 # Prompt
 set -gx STARSHIP_CONFIG "$HOME/.config/starship.toml"
 starship init fish | source
+
+# kimi-code
+fish_add_path -g "/home/stratomaster/.kimi-code/bin"
