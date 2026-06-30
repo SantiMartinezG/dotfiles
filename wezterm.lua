@@ -1,4 +1,4 @@
--- Wezterm Configuration
+-- ~/.config/wezterm/wezterm.lua
 -- Fish + tmux + nvim | CachyOS | Solarized Osaka
 
 local wezterm = require("wezterm")
